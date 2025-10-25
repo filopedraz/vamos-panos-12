@@ -9,6 +9,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
 **Platform Type:** Web and mobile-responsive real estate marketplace
 
 ### Key Vision
+
 - Create a user-friendly platform for discovering and listing properties
 - Provide professional tools for real estate agents and property owners
 - Deliver accurate property valuations and market insights
@@ -19,6 +20,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
 ## 2. Core Functionalities
 
 ### 2.1 User Management & Authentication
+
 - **User Registration & Login**
   - Email/password authentication
   - Social login (Google, Facebook)
@@ -39,6 +41,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
   - Communication preferences
 
 ### 2.2 Property Listings Management
+
 - **Create/Edit Listings**
   - Property type selection (apartment, house, office, land, etc.)
   - Location details (address, GPS coordinates, neighborhood info)
@@ -66,6 +69,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
   - Featured/highlighted listings with analytics
 
 ### 2.3 Advanced Search & Filtering
+
 - **Search Parameters**
   - Location (city, neighborhood, radius search)
   - Property type
@@ -86,6 +90,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
   - Recently added properties
 
 ### 2.4 Property Valuation & Analytics
+
 - **Automatic Valuation Model (AVM)**
   - Price estimation based on location, size, amenities
   - Market price trends and comparables
@@ -100,6 +105,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
   - Price per square meter statistics
 
 ### 2.5 User Communication System
+
 - **Direct Messaging**
   - In-app messaging between users
   - Message notifications
@@ -119,6 +125,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
   - Viewing history
 
 ### 2.6 Favorites & Wishlist
+
 - **Save Properties**
   - Add/remove favorites
   - Create custom collections (wishlist)
@@ -132,6 +139,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
   - Notification preferences customization
 
 ### 2.7 User Reviews & Ratings
+
 - **Seller/Agent Reviews**
   - Star ratings (1-5 stars)
   - Written reviews
@@ -143,6 +151,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
   - Property condition accuracy reviews
 
 ### 2.8 Real Estate Agent/Agency Tools
+
 - **Agent Dashboard**
   - Portfolio of listings
   - Performance analytics
@@ -163,6 +172,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
   - CRM integration ready
 
 ### 2.9 Payment & Monetization
+
 - **Listing Packages**
   - Free basic listing
   - Premium listings with extended visibility
@@ -176,6 +186,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
   - Subscription management
 
 ### 2.10 Admin & Moderation
+
 - **Content Moderation**
   - Listing approval workflow
   - Spam and fraud detection
@@ -198,7 +209,9 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
 ## 3. Technical Architecture
 
 ### 3.1 Frontend Architecture
+
 **Tech Stack:**
+
 - React.js / Next.js for web application
 - React Native / Flutter for mobile (optional)
 - TypeScript for type safety
@@ -208,6 +221,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
 - Axios for HTTP requests
 
 **Key Components:**
+
 - Property search interface with map
 - Listing creation/edit forms with image uploads
 - User dashboard and profile management
@@ -215,7 +229,9 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
 - Admin moderation dashboard
 
 ### 3.2 Backend Architecture
+
 **Tech Stack:**
+
 - Node.js with Express.js or Python/Django
 - PostgreSQL for relational data
 - Redis for caching and session management
@@ -224,6 +240,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
 - Socket.io for real-time features (messaging, notifications)
 
 **Core Services:**
+
 - User authentication & authorization
 - Property listing management
 - Search and filtering engine
@@ -234,6 +251,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
 - Analytics and reporting
 
 ### 3.3 Infrastructure
+
 - Cloud platform: AWS/Google Cloud/Azure
 - Container orchestration: Kubernetes/Docker Compose
 - Load balancing and auto-scaling
@@ -242,6 +260,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
 - CI/CD pipeline (GitHub Actions, GitLab CI)
 
 ### 3.4 Security Considerations
+
 - HTTPS/TLS encryption
 - OWASP compliance
 - SQL injection prevention (parameterized queries)
@@ -258,6 +277,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
 ## 4. User Flows
 
 ### 4.1 Buyer/Renter User Flow
+
 ```
 1. Visit homepage
    ↓
@@ -279,6 +299,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
 ```
 
 ### 4.2 Seller/Property Owner Flow
+
 ```
 1. Sign up and create account
    ↓
@@ -301,6 +322,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
 ```
 
 ### 4.3 Real Estate Agent Flow
+
 ```
 1. Sign up as professional agent
    ↓
@@ -323,6 +345,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
 ```
 
 ### 4.4 Admin Moderation Flow
+
 ```
 1. Access admin dashboard
    ↓
@@ -344,6 +367,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
 ### 5.1 Core Tables
 
 #### users
+
 ```sql
 - id (UUID, Primary Key)
 - email (String, Unique)
@@ -363,6 +387,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
 ```
 
 #### properties
+
 ```sql
 - id (UUID, Primary Key)
 - user_id (UUID, Foreign Key → users)
@@ -393,6 +418,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
 ```
 
 #### amenities
+
 ```sql
 - id (UUID, Primary Key)
 - property_id (UUID, Foreign Key → properties)
@@ -401,6 +427,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
 ```
 
 #### property_images
+
 ```sql
 - id (UUID, Primary Key)
 - property_id (UUID, Foreign Key → properties)
@@ -411,6 +438,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
 ```
 
 #### property_valuations
+
 ```sql
 - id (UUID, Primary Key)
 - property_id (UUID, Foreign Key → properties)
@@ -423,6 +451,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
 ```
 
 #### messages
+
 ```sql
 - id (UUID, Primary Key)
 - sender_id (UUID, Foreign Key → users)
@@ -438,6 +467,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
 ```
 
 #### favorites
+
 ```sql
 - id (UUID, Primary Key)
 - user_id (UUID, Foreign Key → users)
@@ -448,6 +478,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
 ```
 
 #### viewings
+
 ```sql
 - id (UUID, Primary Key)
 - property_id (UUID, Foreign Key → properties)
@@ -461,6 +492,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
 ```
 
 #### reviews
+
 ```sql
 - id (UUID, Primary Key)
 - reviewer_id (UUID, Foreign Key → users)
@@ -474,6 +506,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
 ```
 
 #### search_preferences
+
 ```sql
 - id (UUID, Primary Key)
 - user_id (UUID, Foreign Key → users)
@@ -491,6 +524,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
 ```
 
 #### agencies
+
 ```sql
 - id (UUID, Primary Key)
 - agency_name (String)
@@ -505,6 +539,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
 ```
 
 #### agency_members
+
 ```sql
 - id (UUID, Primary Key)
 - agency_id (UUID, Foreign Key → agencies)
@@ -514,6 +549,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
 ```
 
 #### transactions
+
 ```sql
 - id (UUID, Primary Key)
 - user_id (UUID, Foreign Key → users)
@@ -528,6 +564,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
 ```
 
 #### notifications
+
 ```sql
 - id (UUID, Primary Key)
 - user_id (UUID, Foreign Key → users)
@@ -544,6 +581,7 @@ Idealista Clone is a comprehensive real estate marketplace platform that connect
 ## 6. API Endpoints
 
 ### 6.1 Authentication Endpoints
+
 ```
 POST   /api/v1/auth/register
 POST   /api/v1/auth/login
@@ -557,6 +595,7 @@ POST   /api/v1/auth/2fa/verify
 ```
 
 ### 6.2 User Profile Endpoints
+
 ```
 GET    /api/v1/users/profile
 PATCH  /api/v1/users/profile
@@ -568,6 +607,7 @@ DELETE /api/v1/users/account
 ```
 
 ### 6.3 Property Listing Endpoints
+
 ```
 POST   /api/v1/properties
 GET    /api/v1/properties
@@ -583,6 +623,7 @@ GET    /api/v1/properties/user/:userId
 ```
 
 ### 6.4 Search & Filter Endpoints
+
 ```
 GET    /api/v1/search
 GET    /api/v1/search/map
@@ -592,6 +633,7 @@ DELETE /api/v1/search-preferences/:id
 ```
 
 ### 6.5 Favorites & Wishlist Endpoints
+
 ```
 POST   /api/v1/favorites
 DELETE /api/v1/favorites/:id
@@ -603,6 +645,7 @@ DELETE /api/v1/collections/:id
 ```
 
 ### 6.6 Messaging Endpoints
+
 ```
 POST   /api/v1/messages
 GET    /api/v1/messages
@@ -613,6 +656,7 @@ GET    /api/v1/conversations
 ```
 
 ### 6.7 Viewing/Appointment Endpoints
+
 ```
 POST   /api/v1/viewings
 GET    /api/v1/viewings
@@ -622,6 +666,7 @@ GET    /api/v1/viewings/calendar
 ```
 
 ### 6.8 Reviews & Ratings Endpoints
+
 ```
 POST   /api/v1/reviews
 GET    /api/v1/reviews/:userId
@@ -630,6 +675,7 @@ DELETE /api/v1/reviews/:id
 ```
 
 ### 6.9 Agency Endpoints
+
 ```
 POST   /api/v1/agencies
 GET    /api/v1/agencies/:id
@@ -642,6 +688,7 @@ GET    /api/v1/agencies/:id/analytics
 ```
 
 ### 6.10 Payment Endpoints
+
 ```
 POST   /api/v1/payments/create-intent
 POST   /api/v1/payments/confirm
@@ -650,6 +697,7 @@ GET    /api/v1/invoices/:id
 ```
 
 ### 6.11 Notifications Endpoints
+
 ```
 GET    /api/v1/notifications
 PATCH  /api/v1/notifications/:id/read
@@ -660,6 +708,7 @@ PATCH  /api/v1/notifications/preferences
 ```
 
 ### 6.12 Admin Endpoints
+
 ```
 GET    /api/v1/admin/dashboard
 GET    /api/v1/admin/listings/pending
@@ -677,7 +726,9 @@ GET    /api/v1/admin/analytics
 ## 7. Implementation Notes
 
 ### 7.1 Phase 1: MVP (Weeks 1-8)
+
 **Core Features:**
+
 - User registration and authentication
 - Basic property listing creation and viewing
 - Simple search and filtering
@@ -687,6 +738,7 @@ GET    /api/v1/admin/analytics
 - Basic property images upload
 
 **Tech Setup:**
+
 - Project initialization (frontend & backend repos)
 - Database schema setup
 - Authentication system implementation
@@ -694,7 +746,9 @@ GET    /api/v1/admin/analytics
 - Deployment pipeline
 
 ### 7.2 Phase 2: Enhanced Features (Weeks 9-16)
+
 **Features:**
+
 - Advanced search with map interface
 - Agent/Agency functionality
 - Viewing scheduling system
@@ -705,7 +759,9 @@ GET    /api/v1/admin/analytics
 - Property valuation algorithm
 
 ### 7.3 Phase 3: Analytics & Optimization (Weeks 17-24)
+
 **Features:**
+
 - Comprehensive analytics dashboards
 - Admin moderation tools
 - Real estate market insights
@@ -716,7 +772,9 @@ GET    /api/v1/admin/analytics
 - 360° virtual tours support
 
 ### 7.4 Phase 4: Scale & Polish (Weeks 25+)
+
 **Features:**
+
 - AI-powered recommendations
 - Machine learning price prediction
 - Advanced fraud detection
@@ -728,6 +786,7 @@ GET    /api/v1/admin/analytics
 ### 7.5 Development Guidelines
 
 **Code Standards:**
+
 - Consistent naming conventions
 - Code comments for complex logic
 - Unit test coverage (min 70%)
@@ -736,6 +795,7 @@ GET    /api/v1/admin/analytics
 - Pre-commit hooks for quality checks
 
 **Database:**
+
 - Migration versioning
 - Regular backups
 - Query optimization
@@ -743,6 +803,7 @@ GET    /api/v1/admin/analytics
 - Archive old data regularly
 
 **API Development:**
+
 - RESTful API design
 - Consistent error handling
 - Rate limiting
@@ -751,6 +812,7 @@ GET    /api/v1/admin/analytics
 - Input validation and sanitization
 
 **Security:**
+
 - Regular security audits
 - Penetration testing
 - Dependency vulnerability scanning
@@ -759,6 +821,7 @@ GET    /api/v1/admin/analytics
 - PCI DSS compliance for payments
 
 **Performance Optimization:**
+
 - Image optimization and CDN
 - Database query optimization
 - Caching strategies (Redis)
@@ -767,6 +830,7 @@ GET    /api/v1/admin/analytics
 - Request deduplication
 
 **Testing:**
+
 - Unit tests for business logic
 - Integration tests for API endpoints
 - End-to-end tests for critical user flows
@@ -774,6 +838,7 @@ GET    /api/v1/admin/analytics
 - Security testing
 
 **Monitoring & Logging:**
+
 - Real-time error tracking (Sentry)
 - Server logs aggregation
 - Performance monitoring
@@ -783,11 +848,13 @@ GET    /api/v1/admin/analytics
 ### 7.6 Deployment Strategy
 
 **Staging Environment:**
+
 - Pre-production environment mirroring production
 - Automated testing before deployment
 - Manual QA before production release
 
 **Production Deployment:**
+
 - Blue-green deployment strategy
 - Automated backups before deployment
 - Rollback procedures
@@ -797,6 +864,7 @@ GET    /api/v1/admin/analytics
 ### 7.7 Success Metrics
 
 **User Metrics:**
+
 - Monthly active users (MAU)
 - User retention rate
 - Conversion rate (searches → inquiries)
@@ -804,6 +872,7 @@ GET    /api/v1/admin/analytics
 - User engagement score
 
 **Business Metrics:**
+
 - Number of active listings
 - Average listing visibility
 - Premium listing conversion rate
@@ -811,6 +880,7 @@ GET    /api/v1/admin/analytics
 - Revenue per user
 
 **Technical Metrics:**
+
 - API response time (target: <200ms)
 - System uptime (target: 99.9%)
 - Page load time (target: <3s)
@@ -833,17 +903,17 @@ GET    /api/v1/admin/analytics
 
 ## 8. Glossary
 
-| Term | Definition |
-|------|-----------|
-| **AVM** | Automated Valuation Model - algorithm for property price estimation |
-| **Featured Listing** | Premium visibility listing at top of search results |
-| **Inquiry** | Contact request from interested buyer/renter |
-| **Valuation** | Estimated property market value |
-| **Viewing** | Scheduled property inspection appointment |
-| **Wishlist** | Custom collection of saved properties |
-| **Agency** | Professional real estate company |
-| **Listing** | Property advertisement posted on platform |
-| **Verification** | Process confirming user identity or contact details |
+| Term                 | Definition                                                          |
+| -------------------- | ------------------------------------------------------------------- |
+| **AVM**              | Automated Valuation Model - algorithm for property price estimation |
+| **Featured Listing** | Premium visibility listing at top of search results                 |
+| **Inquiry**          | Contact request from interested buyer/renter                        |
+| **Valuation**        | Estimated property market value                                     |
+| **Viewing**          | Scheduled property inspection appointment                           |
+| **Wishlist**         | Custom collection of saved properties                               |
+| **Agency**           | Professional real estate company                                    |
+| **Listing**          | Property advertisement posted on platform                           |
+| **Verification**     | Process confirming user identity or contact details                 |
 
 ---
 
